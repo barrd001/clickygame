@@ -16,10 +16,10 @@ class App extends Component {
       {name: 'georgia', image: '', wasClicked: false, id: 4 },
       {name: 'oregon', image: '', wasClicked: false, id: 5 },
       {name: 'florida', image: '', wasClicked: false, id: 6 },
-      {name: 'oklahoma', image: '', wasClicked: false, id: 7 },
+      {name: 'oklahoma', image: '', wasClicked: true, id: 7 },
       {name: 'alabama', image: '', wasClicked: false, id: 8 },
       {name: 'pennState', image: '', wasClicked: false, id: 9 },
-      {name: 'minnesota', image: '', wasClicked: false, id: 10 },
+      {name: 'minnesota', image: '', wasClicked: true, id: 10 },
       {name: 'wisconsin', image: '', wasClicked: false, id: 11 },
       {name: 'notreDame', image: '', wasClicked: false, id: 12 },
       {name: 'baylor', image: '', wasClicked: false, id: 13 },
@@ -29,21 +29,14 @@ class App extends Component {
     ]
   }
   render(){
-
-    console.log(this.state.cards)
   return (
    
     
     <BrowserRouter>
     <div className="App">
-    <div>
-       {this.state.cards.map((card, index) => (
-      <p key={card.id} > Hello, {card.name} Clicked? {card.wasClicked} </p>
-       )
-      )} </div>
       <Navbar />
      <Header />
-     <Main />
+     <Main name={this.state.cards.name} image={this.state.cards.image} wasClicked={this.state.cards.wasClicked} key={this.state.cards.id} />
      <Footer />
     </div>
     </BrowserRouter>
