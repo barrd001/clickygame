@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return(
   <footer className='sticky'>
-    this is the footer
+    NCAAF Clicky Game by Devyn Barron
   </footer>
   )
 }
